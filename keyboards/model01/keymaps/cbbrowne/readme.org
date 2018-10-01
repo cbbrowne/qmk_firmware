@@ -1,0 +1,5 @@
+* cbbrowne's keymap for Keyboardio's Model01
+
+This implements all of the default keymap, except for mouse warping.
+
+It adds in Chris' favorite "random key" generator used on the ANY key
