@@ -213,8 +213,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
     break;
   case M_VERSION:
     if (record->event.pressed) {
-      SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP "@");
-      //      SEND_STRING(QMK_VERSION "@" QMK_BUILDDATE);
+      SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP);
     }
     break;
   case M_RANDDIGIT:
