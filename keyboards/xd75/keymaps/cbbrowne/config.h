@@ -18,10 +18,10 @@
 
 // place overrides here
 #ifndef NO_DEBUG
-#define NO_DEBUG
+#    define NO_DEBUG
 #endif
 #ifndef NO_PRINT
-#define NO_PRINT
+#    define NO_PRINT
 #endif
 
 #define LEADER_TIMEOUT 300
