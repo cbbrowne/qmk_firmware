@@ -180,8 +180,8 @@ keys needing to be assigned:
    KC_NLCK, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  RESET, RESET,
    KC_SLCK, KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  KC_F24,  KC_PAUS, KC_PSCR  ,
    KC_CAPS, KC_BTN5, KC_BTN4, KC_BTN3, KC_BTN2, KC_ACL0, KC_ACL2, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY, _______, ___T___, ___T___, KC_WH_U  ,
-   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, BL_TOGG, BL_INC,  BL_DEC,   ___T___, ___T___, KC_MS_U, KC_WH_D  ,
-   RESET  , _______, DF(_QWERTY), DF(_QWERTY), DF(_QWERTY), KC_BTN1, KC_BTN1, _______, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_R 
+   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, BL_TOGG, BL_INC,  BL_DEC,   ___T___, ___T___,KC_MS_U, KC_WH_D  ,
+   RESET  , _______, DF(_QWERTY), DF(_QWERTY), DF(_QWERTY), KC_BTN1, KC_BTN1, _______, _______, _______, _______,  KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R 
  )
 };
 
@@ -282,7 +282,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 void matrix_init_user(void) {
   rgblight_enable();
   rgblight_mode(1);
-  rgblight_sethsv(325,255,255);
+  rgblight_sethsv(255,255,255);
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
@@ -303,7 +303,7 @@ uint32_t layer_state_set_user(uint32_t state) {
     rgblight_sethsv_red();
     break;
   default:
-    rgblight_sethsv(325,255,255);
+    rgblight_sethsv(255,255,255);
     break;
   }
   return state;
