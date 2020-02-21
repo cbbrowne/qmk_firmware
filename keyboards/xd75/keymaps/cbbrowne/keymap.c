@@ -155,10 +155,10 @@ keys needing to be assigned:
  */
  
  [_RAISE] = { /* RAISED */
-  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, _______, KC_GRV,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  ___T___ },
-  { KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    _______, _______, KC_7,    KC_8,    KC_LCBR, KC_RCBR,    _______, _______, KC_INS   },
-  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, _______, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, ___T___, ___T___ },
-  { KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, _______, _______, _______, ___T___, ___T___, _______, _______  },
+  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, USERNAME, KC_GRV,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  ___T___ },
+  { KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    _______, MVERSION, KC_7,    KC_8,    KC_LCBR, KC_RCBR,    _______, _______, KC_INS   },
+  { KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, RANDDIG, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, ___T___, ___T___ },
+  { KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, RANDALP, _______, _______, _______, ___T___, ___T___, _______, _______  },
   { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______  },
  },
  
@@ -282,7 +282,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 void matrix_init_user(void) {
   rgblight_enable();
   rgblight_mode(1);
-  rgblight_sethsv(325,255,255);
+  rgblight_sethsv_purple();
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
@@ -303,7 +303,7 @@ uint32_t layer_state_set_user(uint32_t state) {
     rgblight_sethsv_red();
     break;
   default:
-    rgblight_sethsv(325,255,255);
+    rgblight_sethsv_purple();
     break;
   }
   return state;
